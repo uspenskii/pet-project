@@ -1,0 +1,18 @@
+.logo {
+  $this: &;
+
+  display: block;
+  position: relative;
+  width: 250px;
+  height: 60px;
+  background-image: url("/img/i-logo.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+  text-decoration: none;
+
+  &.is-footer {
+    left: 0;
+    background-image: url("/img/i-logo-footer.svg");
+  }
+}

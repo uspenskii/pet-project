@@ -1,0 +1,37 @@
+.service {
+  $this: &;
+  display: flex;
+  align-items: center;
+
+  &__img {
+    width: 72px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid #e8ecf3;
+    margin-right: 24px;
+    flex-shrink: 0;
+  }
+
+  &__image {
+    display: block;
+    width: 40px;
+    height: 40px;
+  }
+
+  &__text {
+    font-size: 17px;
+    font-weight: $medium;
+    color: $black;
+    line-height: 20px;
+  }
+
+  &__content {
+  }
+
+  @media (max-width: $l) {
+    margin-bottom: 20px;
+  }
+}

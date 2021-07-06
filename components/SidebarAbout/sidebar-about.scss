@@ -1,0 +1,46 @@
+.sidebar-about {
+  $this: &;
+
+  &__item {
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    color: #727f9c;
+    font-size: 18px;
+    line-height: 21px;
+    transition: color 0.3s ease;
+    margin: 0;
+
+    &:hover {
+      color: #1f59ee;
+    }
+
+    &.is-active {
+      color: #1f59ee;
+    }
+
+    &.nuxt-link-active {
+      color: #1f59ee;
+      pointer-events: none;
+    }
+  }
+
+  &__right-text {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #0a2f87;
+    width: 257px;
+  }
+
+  &__right-black {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #091433;
+  }
+
+  @media (max-width: $m) {
+    display: none;
+  }
+}

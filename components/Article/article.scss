@@ -1,0 +1,133 @@
+.article {
+  $this: &;
+
+  &__header {
+    position: relative;
+    height: 560px;
+    overflow: hidden;
+    border-radius: 5px;
+    margin-bottom: 60px;
+  }
+
+  &__cover {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      background: linear-gradient(
+        180deg,
+        rgba(5, 30, 101, 0) 0%,
+        #001859 77.59%
+      );
+      height: 100%;
+      z-index: 1;
+      opacity: 0.6;
+    }
+  }
+
+  &__image {
+    z-index: 1;
+  }
+
+  &__info {
+    position: absolute;
+    left: 60px;
+    width: 100%;
+    bottom: 50px;
+    max-width: 1000px;
+    z-index: 3;
+  }
+
+  &__date {
+    font-size: 20px;
+    line-height: 140%;
+    color: #e8ecf3;
+  }
+
+  &__title {
+    margin: 0;
+    margin-top: 12px;
+    font-weight: 600;
+    font-size: 38px;
+    line-height: 1.2;
+    color: #ffffff;
+  }
+
+  &__link {
+    border: 1px solid #c4cfe4;
+    box-sizing: border-box;
+    border-radius: 3px;
+    padding: 15px 55px;
+    margin-top: 60px;
+    display: inline-block;
+    color: #091433;
+    font-weight: 500;
+    transition: ease background-color 0.3s;
+
+    &:hover {
+      background-color: #c4cfe4;
+    }
+  }
+
+  &__footer {
+    border-top: 1px solid #e8ecf3;
+    margin-top: 80px;
+  }
+
+  @media (max-width: $s) {
+    &__cover {
+      position: relative;
+  
+      &::before {
+        display: none;       
+      }
+    }
+
+    &__info {
+      position: relative;
+      left: 0;
+      width: 100%;
+      bottom: 0;
+      max-width: 1000px;
+      z-index: 3;
+    }
+
+    &__date {
+      font-size: 14px;
+      line-height: 140%;
+      display: flex;
+      align-items: flex-end;
+      color: #727F9C;
+    }
+
+    &__title {
+      margin: 0;
+      margin-top: 12px;
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 34px;
+      color: black;
+    }
+
+    &__header {      
+      height: 100%;
+      overflow: hidden;
+      border-radius: 5px;
+      margin-bottom: 30px;
+    }
+
+    &__footer {
+      border-top: 1px solid #e8ecf3;
+      margin-top: 40px;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
+
+    &__link {
+      margin-top: 40px;
+    }
+  }
+}

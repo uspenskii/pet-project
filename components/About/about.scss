@@ -1,0 +1,38 @@
+.about-main {
+  background-color: #f3f3fb;
+  padding-top: 100px;
+
+  &__header {    
+    width: 100%;
+    // max-width: 880px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__title {
+    font-weight: bold;
+    max-width: 700px;
+    font-size: 40px;
+    line-height: 1.05;
+    text-align: center;
+    color: #01133c;
+  }
+
+  &__text {
+    font-size: 16px;
+    max-width: 880px;
+    line-height: 1.6;
+    text-align: center;
+    color: #777777;
+  }
+
+  &__content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

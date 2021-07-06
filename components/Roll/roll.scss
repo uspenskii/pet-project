@@ -1,0 +1,61 @@
+.roll {
+  $this: &;
+  position: relative;
+
+  &__container {
+    overflow: hidden;
+  }
+  &__wrapper {
+    display: flex;
+    
+  }
+  &__slide {
+    flex-shrink: 0;
+    margin-right: 30px;
+    width: 228px;
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: 32px;
+    font-weight: 600;
+    color: #0a2f87;
+    margin: 0;
+    margin-bottom: 33px;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @media (max-width: $s) {
+    &__title {
+      font-size: 23px;
+      line-height: 1.2;
+    }
+
+    &__buttons {
+      display: none;
+    }
+
+    &__wrapper {
+      flex-wrap: wrap;
+      flex-grow: 1;
+      width: 100%;
+    }
+
+    &__slide {
+      width: 50% !important;  
+      padding-right: 8px !important;
+      padding-left: 8px !important;
+      margin: 0 !important;
+      margin-bottom: 16px !important;
+    }
+  }
+}

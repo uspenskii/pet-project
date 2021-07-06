@@ -1,0 +1,46 @@
+.certificates {
+  $this: &;
+
+  &__text {
+    font-size: 18px;
+    color: #444e63;
+  }
+
+  &__spoiler {
+    border-top: 1px solid #E8ECF3;
+    &:nth-last-child(-n + 3) {
+      border-bottom: 1px solid #E8ECF3;
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #091433;
+    padding: 40px;
+  }
+
+  &__image {
+    margin: 30px 15px 30px 15px;
+  }
+
+  &__footer {
+    font-size: 18px;
+    color: #1f59ee;
+  }
+
+  @media (max-width: $m) { 
+     
+   }
+
+   @media (max-width: $s) { 
+    &__text {
+      font-size: 17px;
+    }
+    &__title {
+      font-size: 17px;
+      line-height: 20px;     
+    }
+   }
+}

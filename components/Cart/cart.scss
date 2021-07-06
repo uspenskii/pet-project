@@ -1,0 +1,135 @@
+.cart {
+  $this: &;
+
+  z-index: 1005;
+  position: fixed;
+  right: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  transform: translateX(120%);
+  transition: ease transform 0.4s, ease opacity 0.3s;
+  opacity: 0;
+
+  &.is-active {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  &__cover {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    width: 100%;
+    height: 80%;
+    position: relative;
+  }
+
+  &__body {
+    overflow: auto;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 18px;
+    margin: 0;
+    color: #091433;
+  }
+
+  &__clear {
+    font-weight: 500;
+    font-size: 14px;
+    border: none;
+    padding: 0;
+    background: none;
+    color: #1f59ee;
+    cursor: pointer;
+  }
+
+  &__wrapper {
+    width: 380px;
+    background-color: #ffffff;
+    height: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: -12px 0px 30px rgba(6, 15, 35, 0.28);
+    position: relative;
+    z-index: 3;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e8ecf3;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+
+  &__footer {
+    border-top: 1px solid #e8ecf3;
+    padding-top: 14px;
+  }
+
+  &__prices {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+
+  &__subtext {
+    font-size: 15px;
+    color: #444e63;
+    margin: 0;
+  }
+
+  &__price {
+    margin: 0;
+    font-weight: 500;
+    font-size: 20px;
+    color: #091433;
+  }
+
+  &__link {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 17px 0 16px 0;
+    background-color: #0a2f87;
+    border-radius: 3px;
+    font-size: 15px;
+    color: #ffffff;
+    font-weight: 500;
+  }
+
+  &__item {
+    padding: 10px 0;
+
+    & + & {
+      border-top: 1px solid #e8ecf3;
+    }
+  }
+
+  &__gifts {
+    padding: 30px 0;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+    padding-right: 24px;
+  }
+
+  @media (max-width: 500px) {
+    &__wrapper {
+      width: 320px;
+    }
+  }
+}
+
+.is-cart-open .cart {
+  opacity: 1;
+  transform: translateX(0);
+}

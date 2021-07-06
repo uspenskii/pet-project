@@ -1,0 +1,38 @@
+.compare-button {
+  $this: &;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: none;
+  background-image: url('/img/i-compare.svg');
+  position: absolute;
+  cursor: pointer;
+  right: 0;
+  top: 12px;
+  border-radius: 3px;
+  padding: 0;
+  z-index: 3;
+  opacity: 0.5;
+  &.is-active {
+    opacity: 1;
+    // filter: contrast(3) hue-rotate(90deg) invert(100%) grayscale(100%);
+    background-image: url('/img/i-compare-active.svg');
+  }
+  &.is-loading {
+    cursor: progress;
+  }
+
+  &.product {
+    right: unset;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: none;
+  }
+
+  &.is-big {
+    filter: contrast(1) hue-rotate(90deg) invert(100%) grayscale(100%);
+    right: 20px;
+  }
+}

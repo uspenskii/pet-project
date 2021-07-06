@@ -1,0 +1,68 @@
+.rating {
+  $this: &;
+
+  display: flex;
+  align-items: center;
+
+  &__amount {
+    margin: 0;
+    font-size: 14px;
+    color: #727f9c;
+    margin-left: 12px;
+    text-decoration: none;
+    transition: ease color 0.3s;
+
+    &:hover {
+      color: #1e5aef;
+      cursor: default;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    width: 17px;
+    height: 17px;
+    background: {
+      image: url('/img/i-star.svg');
+      repeat: no-repeat;
+    }
+
+    & + & {
+      margin-left: 3px;
+    }
+
+    &.is-active {
+      background: {
+        image: url('/img/i-star-active.svg');
+        repeat: no-repeat;
+      }
+    }
+  }
+
+  &.is-alt {
+    #{$this}__amount {
+      color: #f6fafd;
+    }
+  }
+
+  @media (max-width: $s) {
+    &__amount {
+      font-size: 12px;
+    }
+
+    &__item {
+      width: 13px;
+      height: 13px;
+      background: {
+        image: url('/img/i-star.svg');
+        repeat: no-repeat;
+        position: center;
+      }
+    }
+    
+  }
+}

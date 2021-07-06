@@ -1,0 +1,55 @@
+.order {
+  $this: &;
+  position: sticky;
+  top: 80px;
+
+  &__body {
+    padding: 20px 30px;
+    border: 1px solid #e8ecf3;
+    border-radius: 3px;
+  }
+
+  &__title {
+    font-size: 18px;
+    margin: 0;
+    margin-bottom: 20px;
+    font-weight: 500;
+    padding-bottom: 17px;
+    border-bottom: 1px solid #e8ecf3;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    & + & {
+      margin-top: 14px;
+    }
+
+    &.is-border {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid #e8ecf3;
+    }
+  }
+
+  &__name {
+    font-size: 15px;
+    color: #444e63;
+    margin: 0;
+  }
+
+  &__value {
+    font-size: 16px;
+    font-weight: 500;
+    color: #091433;
+    margin: 0;
+  }
+
+  &__link {
+    
+    &.unactive {
+      pointer-events: none;
+    }
+    
+  }
+}

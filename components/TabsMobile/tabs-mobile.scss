@@ -1,0 +1,77 @@
+.tabs-mobile {
+  $this: &;
+  margin-top: 60px;
+  position: relative;  
+  display: none;
+
+  &__header {    
+    border-radius: 3px;    
+    margin-bottom: 40px;
+  }
+
+  &__button {
+    width: 100%;
+    background-color: #F6FAFD;
+    border: none;    
+    font-family: $ff;
+    padding: 20px 20px;
+    font-size: 17px;
+    font-weight: 500;
+    color: #091433;
+    cursor: pointer;
+    display: flex;
+    align-items: flex-start;
+    
+    transition: background-color ease 0.3s, color 0.3 ease; 
+    margin-bottom: 5px;
+    i {
+      color: #c4cfe4;
+      font-style: normal;
+      margin-left: 5px;
+    }
+
+    &.is-active {
+      background-color: #1f5aee;
+      color: $white;
+    }
+  }
+
+  &__specifications {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  &__specification {
+    width: 556px;
+
+    & + & {
+      margin-left: 90px;
+    }
+  }
+
+  &__video {
+    width: 100%;
+    height: 200px;
+  }
+
+  &__deliveries {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__delivery {
+    max-width: 700px;
+    width: 100%;
+    margin-bottom: 40px;
+    margin-right: 60px;
+  }  
+
+  &__body {
+    margin-top: 30px;
+  }
+
+  @media (max-width: $s) {
+    display: block;
+  }
+}

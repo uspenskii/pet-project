@@ -1,0 +1,75 @@
+.slide {
+  $this: &;
+  position: relative;
+  height: 340px;
+  padding: 40px 50px 40px 60px;
+
+  &__title {
+    font-size: 60px;
+    font-weight: $semibold;
+    color: $white;
+    margin: 2px 0 56px 0;
+    line-height: 1;
+
+    span {
+      display: block;
+      color: $grey-light;
+      font-size: 40px;
+      font-weight: $medium;
+      margin: 10px 0 0 0;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    border-radius: $radius1;
+  }
+
+  &__mobile {
+    width: 100%;
+    object-fit: cover;
+    display: none;
+  }
+
+  &__info {
+    position: relative;
+    z-index: 1;
+    max-width: 590px;
+  }
+
+  &__logo {
+  }
+
+  @media (max-width: $l) {
+    height: 320px;
+    &__link {
+      display: none;
+    }
+  }
+
+  @media (max-width: $s) {
+    height: 144px;
+    padding: 20px;
+
+    &__logo {
+      width: 100px;
+    }
+    &__title {
+      font-size: 32px;
+      margin: 0;
+    }
+
+    &__image {
+      display: none;
+    }
+
+    &__mobile {
+      display: flex;
+    }
+  }
+}

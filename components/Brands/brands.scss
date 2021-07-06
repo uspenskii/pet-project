@@ -1,0 +1,58 @@
+.brands {
+  $this: &;
+  position: relative;
+
+  &.is-all {
+    display: flex !important;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  &__container {
+    overflow: hidden;
+  }
+
+  &__title {
+    font-size: 32px;
+    font-weight: 600;
+    color: #0a2f87;
+    margin: 0;
+    margin-bottom: 19px;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__slide {
+    flex-shrink: 0;
+
+    &.is-all {
+      margin-right: 40px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+  }
+  @media (max-width: $s) {
+    &__title {
+      font-size: 23px;
+      line-height: 1.2;
+      margin-bottom: 0;
+    }
+
+    &__buttons {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+.category {
+  $this: &;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #f6fafd;
+
+  &__item {
+    margin-bottom: 30px;
+  }
+
+  &:hover {
+    #{$this}__img {
+      transform: scale(1.02);
+    }
+
+    #{$this}__name {
+      color: $blue;
+    }
+  }
+
+  &__body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+  }
+
+  &__name {
+    color: $black;
+    font-size: 17px;
+    font-weight: $medium;
+    transition: color 0.3s $ease;
+    text-align: center;
+    line-height: 20px;
+    margin: 0;
+  }
+
+  &__img {
+    // width: 170px;
+    height: 173px;
+    transition: transform 0.3s $ease;
+  }
+
+  @media (max-width: $s) {
+    padding: 10px;
+
+    &__img {
+      height: auto;
+    }
+  }
+}

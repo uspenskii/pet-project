@@ -1,0 +1,137 @@
+.button {
+  $this: &;
+  border: none;
+  z-index: 0;
+  position: relative;
+  display: inline-block;
+  padding: 17px 31px 15px;
+  color: $white;
+  border-radius: $radius1;
+  background-color: $blue;
+  font-weight: $medium;
+  font-family: $ff;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: normal;
+  vertical-align: top;
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  will-change: background-color;
+  transition: background-color 0.3s $ease, color 0.3s $ease,
+    border-color 0.3s $ease;
+  cursor: pointer;
+
+  &__img {
+    transition: 0.5s $ease;
+  }
+
+  &.unactive {
+    pointer-events: none;
+    background-color: #e8ecf3 !important;
+  }
+
+  &.is-catalog {
+    padding: 0;
+    z-index: $layer-10;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    width: 230px;
+    height: 50px;
+    background: linear-gradient(90deg, #1f59ee 0%, #0a2f87 100%);
+    border-radius: $radius1;
+    margin-top: 8px;
+
+    &.is-fixed {
+      display: none;
+      left: 15px;
+      top: 10px;
+    }
+
+    &:hover {
+      &::before {
+        opacity: 1;
+      }
+
+      .button__img {
+        transform: translateX(-1px);
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      min-width: 230px;
+      max-width: 230px;
+      height: 100%;
+      border-radius: $radius1;
+      background: linear-gradient(90deg, #1f59ee 30%, #0a2f87 100%);
+      z-index: -1;
+      opacity: 0;
+      transition: opacity 0.3s $ease;
+    }
+
+    &.is-active {
+      &::before {
+        opacity: 1;
+      }
+      .button__img {
+        transform: translateX(-1px);
+      }
+    }
+
+    .button__img {
+      order: -1;
+      margin-right: 13px;
+    }
+  }
+
+  &.is-slider {
+    text-transform: none;
+  }
+
+  &.is-form {
+    width: 100%;
+    background-color: #0a2f87;
+    font-size: 16px;
+    padding: 27px 30px;
+  }
+
+  &.is-bordered {
+    background-color: transparent;
+    color: $blue-dark;
+    border-radius: $radius1;
+    border: 1px solid #e8ecf3;
+    padding: 15px 44px;
+
+    &.is-product {
+      padding: 15px 23px;
+    }
+
+    &:hover {
+      background-color: $blue-dark;
+      color: $white;
+      border-color: $blue-dark;
+    }
+  }
+
+  &:hover {
+    background-color: darken($blue, 10);
+  }
+
+  &:active {
+    background-color: darken($blue, 15);
+  }
+
+  &[disabled] {
+    opacity: 0.3 !important;
+    pointer-events: none;
+  }
+}

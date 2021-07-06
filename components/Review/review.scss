@@ -1,0 +1,68 @@
+.review {
+  $this: &;
+  display: flex;
+  margin-bottom: 40px;
+  &__row {
+    width: 100%;
+  }
+  &__cover {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #e8ecf3;
+    flex-shrink: 0;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__fio {
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    color: #727f9c;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+
+  &__date {
+    font-size: 14px;
+    margin: 0;
+    color: #727f9c;
+    margin-bottom: 3px;
+  }
+
+  &__name {
+    font-size: 18px;
+    font-weight: 500;
+    color: #091433;
+    margin: 0;
+  }
+
+  &__rating {
+    max-width: 100px;
+  }
+
+  &__description {
+    font-size: 16px;
+    line-height: 1.64;
+    margin: 0;
+    color: #444e63;
+  }
+
+  @media (max-width: $m) {
+    margin-bottom: 40px;
+
+    &__rating {
+      max-width: none;
+    }
+  }
+}

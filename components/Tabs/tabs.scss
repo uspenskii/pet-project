@@ -1,0 +1,135 @@
+.tabs {
+  $this: &;
+  margin-top: 60px;
+  position: relative;
+
+  &__header {
+    background-color: #f6fafd;
+    border-radius: 3px;
+    padding: 0 40px;
+    margin-bottom: 40px;
+  }
+
+  &__button {
+    border: none;
+    background: none;
+    font-family: $ff;
+    padding: 20px 0;
+    font-size: 17px;
+    font-weight: 500;
+    color: #091433;
+    cursor: pointer;
+    border-bottom: 2px solid rgba(31, 90, 238, 0);
+    transition: ease border-bottom 0.3s;
+
+    & + & {
+      margin-left: 74px;
+    }
+
+    i {
+      color: #c4cfe4;
+      font-style: normal;
+      margin-left: 5px;
+    }
+
+    &.is-active {
+      border-color: #1f5aee;
+    }
+  }
+
+  &__specifications {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  &__specification {
+    width: 556px;
+
+    & + & {
+      margin-left: 90px;
+    }
+  }
+
+  &__video {
+    width: 745px;
+    height: 500px;
+  }
+
+  &__deliveries {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__delivery {
+    max-width: 700px;
+    width: 100%;
+    margin-bottom: 40px;
+    margin-right: 60px;
+  }
+
+  @media (max-width: $m) {
+
+    &__header {
+      background-color: #f6fafd;
+      border-radius: 3px;
+      padding: 0 20px;
+      margin-bottom: 40px;
+    }
+
+    &__button {
+      border: none;
+      background: none;
+      font-family: $ff;
+      padding: 20px 0;
+      font-size: 17px;
+      font-weight: 500;
+      color: #091433;
+      cursor: pointer;
+      border-bottom: 2px solid rgba(31, 90, 238, 0);
+      transition: ease border-bottom 0.3s;
+  
+      & + & {
+        margin-left: 20px;
+      }
+  
+      i {
+        color: #c4cfe4;
+        font-style: normal;
+      }
+  
+      &.is-active {
+        border-color: #1f5aee;
+      }
+    }
+  }
+
+  @media (max-width: $s) {
+    display: none;
+    &__header {
+      overflow: auto;
+      display: flex;
+    }
+
+    &__button {
+      flex-shrink: 0; 
+      padding: 20px;
+
+      & + & {
+        margin-left: 0;
+      }
+      &.is-active {
+        border-color: unset;
+        background-color: #1f5aee;
+        color: white;
+      }
+
+    }
+
+    &__video {
+      width: 100%;
+      height: 200px;
+    }
+  }
+  
+}

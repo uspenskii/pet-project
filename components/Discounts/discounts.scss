@@ -1,0 +1,133 @@
+.discounts {
+  $this: &;
+  display: flex;
+
+  &__left {
+    max-width: 394px;
+    width: 100%;
+    flex-grow: 1;
+    margin-left: 129px;
+    margin-right: 75px;
+    padding-top: 31px;
+  }
+
+  &__right {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    width: 380px;
+    &:nth-child(even) {
+      margin-top: 30px;
+      margin-left: 30px;
+    }
+  }
+
+  &__title {
+    position: relative;
+    z-index: 15;
+    font-size: 46px;
+    font-weight: $semibold;
+    color: $black;
+    line-height: 1.17;
+    margin: 0;
+    margin-bottom: 31px;
+
+    span {
+      color: $blue-dark;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      background-color: #d7dfee;
+      height: 10px;
+      width: 345px;
+      top: 87%;
+      left: 0;
+      z-index: -1;
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+    color: #444e63;
+    margin: 0;
+    max-width: 394px;
+
+    img {
+      vertical-align: middle;
+      margin: 0 10px;
+    }
+  }
+
+  &__img {
+    margin-top: 25px;
+  }
+
+  @media (max-width: $xl) {
+    &__left {
+      margin: 0;
+    }
+    &__right {
+      justify-content: flex-end;
+    }
+  }
+
+  @media (max-width: 1220px) {
+    flex-direction: column;
+    &__left {
+      max-width: 100%;
+    }
+
+    &__right {
+      justify-content: flex-start;
+      margin-top: 35px;
+    }
+    &__text {
+      max-width: 100%;
+    }
+
+    &__img {
+      display: none;
+    }
+
+    &__item {
+      margin-left: 0;
+      margin-right: 30px;
+      &:nth-child(even) {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+  }
+
+  @media (max-width: 830px) {
+    &__right {
+      justify-content: space-between;
+    }
+    &__item {
+      margin-right: 0;
+      width: calc(50% - 10px);
+    }
+  }
+
+  @media (max-width: $s) {
+    &__title {
+      font-size: 34px;
+      &::before {
+        width: 100%;
+        display: none;
+      }
+    }
+    &__text {
+      font-size: 16px;
+    }
+    &__item {
+      width: 100%;
+      margin-top: 30px;
+    }
+  }
+}

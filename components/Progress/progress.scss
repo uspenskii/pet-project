@@ -1,0 +1,81 @@
+.progress {
+  $this: &;
+  display: flex;
+  height: 100%;
+  transform: translateX(100%);
+  transition: ease transform 1s;
+
+  &.is-active {
+    transform: translateX();
+  }
+
+  &__max {
+    width: 6px;
+    height: 100%;
+    background: #ffffff;
+    border-radius: 3px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__current {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(
+      180deg,
+      #ff8832 0%,
+      #0a2f87 26.41%,
+      #1f59ee 63.09%
+    );
+    transition: ease height 0.7s;
+  }
+
+  &__items {
+    height: 100%;
+    transform: translateX(22px);
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    bottom: -38px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    position: absolute;
+  }
+
+  &__counter {
+    margin: 0;
+    line-height: 1.6;
+    margin-right: 7px;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 16px;
+  }
+
+  &__icon {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.is-cart-open .progress {
+  animation: progress 0.2s linear 0.3s forwards;
+}
+
+@keyframes progress {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

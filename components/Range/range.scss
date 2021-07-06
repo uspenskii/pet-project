@@ -1,0 +1,21 @@
+.range {
+  $this: &;
+  margin-bottom: 17px;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    pointer-events: none;
+  }
+
+  &__cost {
+    font-size: 13px;
+    color: $grey-dark;
+    margin: 0 0 7px 0;
+    font-weight: 500;
+  }
+
+  &__label {
+  }
+}

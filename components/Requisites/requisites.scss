@@ -1,0 +1,24 @@
+.requisites {
+  &__header {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    color: #091433;
+  }
+
+  &__item {
+    display: flex;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #091433;
+
+    &.blue {
+      width: 255px;
+      color: #0a2f87;
+    }
+  }
+}

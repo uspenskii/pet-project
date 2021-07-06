@@ -1,0 +1,152 @@
+.compare {
+  $this: &;
+  margin-top: 28px;
+  margin-bottom: 120px;
+  overflow: hidden;
+  &__tabs {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+    overflow: hidden;
+  }
+  &__wrapper {
+    display: flex;
+  }
+  &__item {
+    flex-shrink: 0;
+    width: 228px;
+  }
+ 
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e8ecf3;
+  }
+
+  &__sorting {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__sort {
+    margin-right: 30px;
+    margin-bottom: 20px;
+  }
+
+  &__tab {
+    border: 1px solid #e8ecf3;
+    border-radius: 24px;
+    background: none;
+    transition: ease border-color 0.3s, ease background-color 0.3s,
+      ease color 0.3s;
+    padding: 12px 26px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #727f9c;
+    font-family: $ff;
+    flex-shrink: 0;
+
+    & + & {
+      margin-left: 20px;
+    }
+
+    &:hover {
+      border-color: #1f59ee;
+      color: #1f59ee;
+    }
+
+    &.is-active {
+      background-color: #1f59ee;
+      border-color: #1f59ee;
+      color: #ffffff;
+      pointer-events: none;
+    }
+  }
+
+  &__clear {
+    font-size: 14px;
+    color: #1f59ee;
+    border: none;
+    background: none;
+    font-family: $ff;
+    cursor: pointer;
+    font-weight: 500;
+    padding: 0;
+  }
+
+  &__none {
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__headlibe {}
+  
+  &__button {
+    margin-top: 40px;
+    border: 1px solid #c4cfe4;    
+    border-radius: 3px;
+    background: none;
+    
+    font-weight: 500;
+    font-family: $ff;
+    cursor: pointer;
+    transition: ease background-color 0.3s;
+    font-size: 16px;
+      color: #ffffff;
+     
+      border-color: #0a2f87;
+      background-color: #0a3088;
+      padding: 20px 36px;  
+
+    &:hover {
+      background-color: #c4cfe4;
+    }
+  }
+
+  &__characteristics {
+    margin-top: 40px;
+  }
+
+  &__body {
+    overflow-x: auto;    
+    &::-webkit-scrollbar {
+      width: 4px;
+      background: rgba(11, 4, 31, 0);
+      height: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      width: 4px;
+      background-color: #9b9b9b;
+      border-radius: 2px;
+      height: 4px;
+      opacity: 0;
+    }
+  }
+
+  @media (max-width: $s) {
+    &__item {
+      width: 152px;
+      margin-right: 16px;
+    }
+
+    &__clear {
+      display: none;
+    }
+
+    &__tabs {
+      overflow: auto;
+      overflow-y: scroll;
+    }
+  }
+}

@@ -1,0 +1,153 @@
+.drop-menu {
+  $this: &;
+  padding: 40px 0;
+  display: flex;
+  max-height: calc(100vh - 149px);
+
+  &__link {
+    display: flex;
+    align-items: center;
+    
+  }
+  &__link-adaptive {
+    display: none;
+    align-items: center;
+    color: #091433;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+    &:hover {
+      color: #1f59ee;
+      background-color: #fff;
+      cursor: pointer;
+      
+      #{$this}__icon {
+        filter: grayscale(0);
+      }
+    }
+  }
+
+  &__sidebar {
+    padding-right: 25px;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+      width: 4px;
+      background: rgba(11, 4, 31, 0);
+      height: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      width: 4px;
+      background-color: #9b9b9b;
+      border-radius: 2px;
+      height: 4px;
+    }
+  }
+
+  &__icon {
+    filter: grayscale(1);
+  }
+
+  &__title {
+    font-size: 15px;
+    color: currentColor;
+    margin-left: 10px;
+    transition: ease color 0.3s;
+  }
+
+  &__link {
+    color: #091433;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+    &:hover {
+      color: #1f59ee;
+      background-color: #fff;
+      cursor: pointer;
+      
+      #{$this}__icon {
+        filter: grayscale(0);
+      }
+    }
+  }
+
+  &__body {
+    background-color: #fff;
+    flex-grow: 1;
+    position: relative;
+    display: none;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 10px 50px 50px 50px;
+    overflow: scroll;
+
+    &.is-active {
+      display: flex;
+    }
+
+    &::-webkit-scrollbar {
+      width: 4px;
+      background: rgba(11, 4, 31, 0);
+      height: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      width: 4px;
+      background-color: #9b9b9b;
+      border-radius: 2px;
+      height: 4px;
+      opacity: 0;
+    }
+  }
+
+  &__nav {
+    max-width: 220px;
+    margin-right: 50px;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+
+  &__name {
+    font-weight: 500;
+    color: #091433;
+    transition: ease color 0.3s;
+
+    &:hover {
+      color: #1f59ee;
+    }
+  }
+
+  &__list {
+    &.is-alt {
+      margin-top: 16px;
+      #{$this}__link {
+        font-size: 15px;
+        color: #727f9c;
+        transition: ease color 0.3s;
+
+        &:hover {
+          color: #1f59ee;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $m) {
+    &__body {
+      flex-wrap: nowrap;
+      transition: ease transform 0.3s;
+      right: 0;
+      padding: 20px;
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: calc(100% - 75px);
+    }
+
+    &__link {
+      display: none;      
+    }
+    &__link-adaptive {
+      display: flex;      
+    }
+  }
+}
